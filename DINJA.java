@@ -9,6 +9,9 @@ package dinja;
 import DELPHI.System1;
 import DELPHI.StrUtils;
 import DELPHI.SysUtils;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
@@ -46,6 +49,15 @@ public class DINJA {
         str = "teste-de-copy";
         str = System1.Copy(str, 3, 17);
         System.out.println(str);
+        
+        str = "Diretório corrente é = ";
+        try {
+            str = str + SysUtils.GetCurrentDir();
+        } catch (IOException ex) {
+            Logger.getLogger(DINJA.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println(str);
+        
         
         //String valores = "2.000,00";
 	//valores = valores.replace('.', ' ');

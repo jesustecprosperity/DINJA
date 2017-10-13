@@ -5,6 +5,8 @@
  */
 package DELPHI;
 
+import java.io.IOException;
+
 /**
  *
  * @author root
@@ -24,6 +26,13 @@ public class SysUtils {
         String s = new String();
         s = d.toString();
         return s;
+    }
+    
+    
+    //Delphi function GetCurrentDir: string; adicionado em 13/10/2017
+    public static String GetCurrentDir() throws IOException{
+        String current = new java.io.File( "." ).getCanonicalPath();
+        return current;
     }
     
     
