@@ -11,6 +11,8 @@ package DELPHI;
  */
 public class System1 {
     
+    //Delphi procedure GetDir(Drive: Byte; var S: String);
+    
     //function Copy(S: <string or dynamic array>; Index: Integer; Count: Integer): string;
     public static String Copy(String s,Integer x, Integer y){
         s = "-"+s;
